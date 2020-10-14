@@ -117,6 +117,17 @@ xPatterns
   color: #fff;
 }
 
+.other-links h3 {
+  margin: 1rem;
+}
+.other-links ul {
+  display: flex;
+  justify-content: space-around;
+}
+.other-links ul a {
+  color: #e0a053;
+}
+
 /* -------------------------------- 
 
 xNavigation 

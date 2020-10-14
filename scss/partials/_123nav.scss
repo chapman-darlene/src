@@ -39,3 +39,16 @@
         }
     }
 }
+
+.other-links {
+    h3{
+        margin: 1rem;
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+        a {
+            color: $color-2;
+        }
+    }
+}
