@@ -130,7 +130,7 @@ header {
   background: #e0a053;
 }
 .cd-main-nav li a {
-  color: #fff;
+  color: #2f637b;
   border-color: #e4ac69;
 }
 @media only screen and (min-width: 1024px) {
@@ -634,7 +634,7 @@ header nav {
     transform: translateY(0);
     width: auto;
     height: 80px;
-    background: transparent;
+    background: #fff;
     padding: 0 2em;
     text-align: left;
   }

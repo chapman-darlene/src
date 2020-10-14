@@ -149,7 +149,7 @@ header {
 		@include transform(translateY(0));
 		width: auto;
 		height: 80px;
-		background: transparent;
+		background: $color-5;
 		padding: 0 2em;
 		text-align: left;
 
