@@ -59,7 +59,9 @@ xBackground
 -------------------------------- */
 body {
   /* this is the page background */
-  background-color: #fff;
+  background-image: url(/assets/images/cloudbody.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* -------------------------------- 

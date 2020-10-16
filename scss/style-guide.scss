@@ -21,7 +21,10 @@ xBackground
 
 body {
   /* this is the page background */
-  background-color: $color-5;
+  background-image: url(/assets/images/cloudbody.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  //background-color: $color-5;
 }
 
 /* -------------------------------- 
@@ -60,7 +63,7 @@ xPage title
 -------------------------------- */
 
 main > h1 {
-  color: $color-2;
+   color: $color-2;
 
   @include MQ(L) {
     /* title goes into the header on big devices */
