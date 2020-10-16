@@ -1,0 +1,56 @@
+
+.cd-logo {
+	display: inline-block;
+	height: 100%;
+	position: relative;
+
+	img {
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 50%;
+		@include transform(translateX(-50%) translateY(-50%));
+	}
+
+	@include MQ(L) {
+		margin-left: 5%;
+	}
+}
+
+.cd-logo {
+	/* logo box style */
+	background-color: $color-1;
+	width: 120px;
+  
+	@include MQ(M) {
+	  width: 180px;
+	}
+  }
+
+
+.cd-download {
+	/* download button top-right visible on big devices */
+	background-color: lighten($color-2, 10%);
+  
+	.no-touch &:hover {
+	  background-color: lighten($color-2, 15%);
+	}
+
+	span {
+		/* tooltip */
+		background: $color-1;
+		color: $color-5;
+	
+		&::before {
+		  /* right arrow color */
+		  border-color: $color-1;
+		}
+	  }
+  }
+
+  
+.cd-icons li {
+	/* icons size */
+	width: 32px;
+	height: 32px;
+  }
