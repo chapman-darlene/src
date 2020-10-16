@@ -132,6 +132,10 @@ xPatterns
 .other-links ul a {
   color: #e0a053;
 }
+.other-links ul a:hover {
+  color: #2f637b;
+  text-decoration: underline;
+}
 
 /* -------------------------------- 
 

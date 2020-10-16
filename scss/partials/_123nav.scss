@@ -50,6 +50,10 @@
         justify-content: space-around;
         a {
             color: $color-2;
+            &:hover {
+                color: $color-1;
+                text-decoration: underline;
+            }
         }
         //img {}
             
