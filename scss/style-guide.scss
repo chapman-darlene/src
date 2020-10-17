@@ -8,15 +8,8 @@
 // additional colors
 
 
-
-// fonts
-$primary-font: 'Merriweather', serif;
-$secondary-font: 'Open Sans', sans-serif;
-
 /* -------------------------------- 
-
 xBackground 
-
 -------------------------------- */
 
 body {
@@ -28,9 +21,7 @@ body {
 }
 
 /* -------------------------------- 
-
 xPatterns
-
 -------------------------------- */
 
 .cd-box {
@@ -43,9 +34,7 @@ xPatterns
 }
 @import 'partials/123nav';
 /* -------------------------------- 
-
 xNavigation 
-
 -------------------------------- */
 
 header {
@@ -57,9 +46,7 @@ header {
 
 
 /* -------------------------------- 
-
 xPage title 
-
 -------------------------------- */
 
 main > h1 {
@@ -72,82 +59,28 @@ main > h1 {
 }
 
 /* -------------------------------- 
-
 xTypography 
-
 -------------------------------- */
+//typography
+@import 'partials/typography';
 
-h1,
-h2 {
-  font-family: $secondary-font;
-  color: $color-2;
-}
+// fonts
+@import 'partials/fonts';
 
-h1 {
-  font-size: 2.4rem;
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 0 0 0.4em;
 
-  @include MQ(S) {
-    font-size: 3.2rem;
-  }
-
-  @include MQ(M) {
-    font-size: 4rem;
-  }
-}
-
-h2 {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 1em 0;
-
-  @include MQ(S) {
-    font-size: 1.8rem;
-    margin: 1em 0 1.4em;
-  }
-}
-
-section > h2::before {
-  /* number before each section title */
-  color: darken($color-4, 15%);
-}
-
-p {
-  font-size: 1.4rem;
-  line-height: 1.4;
-  color: $color-2;
-
-  a {
-    color: $color-1;
-    text-decoration: underline;
-  }
-
-  @include MQ(S) {
-    font-size: 1.6rem;
-    line-height: 1.6;
-  }
-}
 
 /* -------------------------------- 
-
 xButtons 
-
 -------------------------------- */
 @import 'partials/buttons';
 
 /* -------------------------------- 
-
 xIcons 
-
 -------------------------------- */
 
 
 /* -------------------------------- 
-
 xForm 
-
 -------------------------------- */
 @import 'partials/forms';
 
