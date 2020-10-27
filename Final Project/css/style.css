@@ -121,4 +121,15 @@ p a:hover {
   text-decoration: underline;
 }
 
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  background-image: url(/assets/images/cloudbody.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /*# sourceMappingURL=style.css.map */
