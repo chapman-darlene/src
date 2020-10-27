@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* -------------------------------- 
 
 xBasic style
@@ -648,4 +649,19 @@ section {
 
 .no-csstransitions .cd-select::after {
 	display: none;
+=======
+body {
+	font-size: 1.6rem;
+    font-family: $primary-font;
+    
+}
+.main{
+    background-image: url(/assets/images/cloudbody.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+//dark blue fixed section
+.supporting{
+
+>>>>>>> 6bba63ce1470ecae48cdac3284c31e1da48b0696
 }
