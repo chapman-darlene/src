@@ -1,3 +1,19 @@
+// Responsive media query
+$phone-width: 700px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$phone-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
 @mixin box-sizing($type) {
      -webkit-box-sizing: $type;
   -moz-box-sizing: $type;
