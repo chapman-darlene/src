@@ -1,18 +1,3 @@
-// Responsive media query
-$phone-width: 700px;
-$desktop-width: 1024px;
-
-@mixin tablet {
-  @media (min-width: #{$phone-width}) and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
-  }
-}
 
 @mixin box-sizing($type) {
      -webkit-box-sizing: $type;
@@ -20,13 +5,13 @@ $desktop-width: 1024px;
   box-sizing: $type;
 }
 
-@mixin clearfix {
-  &::after {
-    clear: both;
-    content: "";
-    display: block;
-  }
-}
+// @mixin clearfix {
+//   &::after {
+//     clear: both;
+//     content: "";
+//     display: block;
+//   }
+// }
 
 @mixin transform($options) {
     -webkit-transform: $options;
@@ -42,12 +27,12 @@ $desktop-width: 1024px;
   transition: $options;
 }
 
-@mixin user-select($options) {
-    -webkit-user-select: $options;
-  -moz-user-select: $options;
-  -ms-user-select: $options;
-  user-select: $options;
-}
+// @mixin user-select($options) {
+//     -webkit-user-select: $options;
+//   -moz-user-select: $options;
+//   -ms-user-select: $options;
+//   user-select: $options;
+// }
 
 @mixin appearance($option) {
     -webkit-appearance: $option;

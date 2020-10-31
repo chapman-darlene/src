@@ -43,27 +43,24 @@
   color: #fff;
 }
 
-.other-links {
+.design-archives {
   padding: 1rem;
 }
-.other-links h3 {
+.design-archives h3 {
   margin: 1rem;
 }
-.other-links ul {
+.design-archives ul {
   display: flex;
   justify-content: space-around;
 }
-.other-links ul a {
+.design-archives ul a {
   color: #e0a053;
 }
-.other-links ul a:hover {
+.design-archives ul a:hover {
   color: #2f637b;
   text-decoration: underline;
 }
 
-/* -------------------------------- 
-xNavigation 
--------------------------------- */
 h1,
 h2 {
   font-family: "Roboto", sans-serif;
@@ -74,26 +71,6 @@ h1 {
   font-size: 2.5rem;
   line-height: 1.4;
   margin: 0 0 0.4em;
-}
-@media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 3.4rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  h1 {
-    font-size: 4.2rem;
-  }
-}
-
-h2 {
-  margin: 1.2em 0;
-}
-@media only screen and (min-width: 768px) {
-  h2 {
-    font-size: 1.8rem;
-    margin: 1em 0 1.4em;
-  }
 }
 
 section > h2::before {
@@ -110,15 +87,24 @@ p a {
   color: #2f637b;
   text-decoration: none;
 }
-@media only screen and (min-width: 768px) {
-  p {
-    font-size: 1.7rem;
-    line-height: 1.6;
-  }
-}
 p a:hover {
   color: #707070;
   text-decoration: underline;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -126,10 +112,52 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.main {
-  background-image: url(/assets/images/cloudbody.jpg);
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.intro {
+  background-image: url(../../assets/images/sunset_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+@media (min-width: 700px) and (max-width: 1023px) {
+  nav {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .intro {
+    flex-wrap: row;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,81 @@
+*, *::after, *::before {
+	@include box-sizing(border-box);
+}
+
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+    font-family: $primary-font;  
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+//UPDATE!
+.intro {
+  	background-image: url(../../assets/images/sunset_1.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	box-shadow: 0 1px 1px rgba(#000, .1);
+	z-index: 10;
+}
+
+
+
+
+
+// #zen-intro::after {
+//     content: "url(../../assets/images/logo.png), z";
+// }
+
+//UPDATE
+@include phone {
+
+    nav {
+        display: flex;
+    }
+
+}
+
+//UPDATE
+@include desktop {
+
+    .page-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .intro {
+      flex-wrap: row;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+    }
+
+}

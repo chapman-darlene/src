@@ -10,24 +10,25 @@ h1 {
   font-size: 2.5rem;
   line-height: 1.4;
   margin: 0 0 0.4em;
-
-  @include MQ(S) {
-    font-size: 3.4rem;
-  }
-
-  @include MQ(M) {
-    font-size: 4.2rem;
-  }
 }
 
-h2 {
-  margin: 1.2em 0;
+//   @include phone {
+//     font-size: 3.4rem;
+//   }
 
-  @include MQ(S) {
-    font-size: 1.8rem;
-    margin: 1em 0 1.4em;
-  }
-}
+//   @include desktop {
+//     font-size: 4.2rem;
+//   }
+// }
+
+// h2 {
+//   margin: 1.2em 0;
+
+//   @include MQ(S) {
+//     font-size: 1.8rem;
+//     margin: 1em 0 1.4em;
+//   }
+// }
 
 section > h2::before {
   /* number before each section title */
@@ -44,10 +45,10 @@ p {
     text-decoration: none;
   }
 
-  @include MQ(S) {
-    font-size: 1.7rem;
-    line-height: 1.6;
-  }
+  // @include MQ(S) {
+  //   font-size: 1.7rem;
+  //   line-height: 1.6;
+  // }
 
   a:hover {
       color: $color-3;
