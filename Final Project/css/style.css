@@ -64,7 +64,7 @@
 h1,
 h2 {
   font-family: "Roboto", sans-serif;
-  color: #e0a053;
+  color: #707070;
 }
 
 h1 {
@@ -90,6 +90,9 @@ p a {
 p a:hover {
   color: #707070;
   text-decoration: underline;
+}
+p div {
+  background-color: #707070;
 }
 
 *, *::after, *::before {
