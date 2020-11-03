@@ -16,14 +16,14 @@
   background-color: #3d81a0;
 }
 .cd-primary-nav li a {
-  color: #e0a053;
+  color: #EDAA58;
 }
 .cd-primary-nav li a:active {
   color: #fff;
 }
 
 .cd-secondary-nav {
-  background-color: #e0a053;
+  background-color: #EDAA58;
   margin: 1rem;
   max-width: 50%;
   opacity: 0.8;
@@ -33,7 +33,7 @@
   border-radius: 0.25em;
 }
 .cd-secondary-nav li:hover {
-  background-color: #e8b87e;
+  background-color: #f2c186;
 }
 .cd-secondary-nav li a {
   color: #000000;
@@ -54,7 +54,7 @@
   justify-content: space-around;
 }
 .design-archives ul a {
-  color: #e0a053;
+  color: #EDAA58;
 }
 .design-archives ul a:hover {
   color: #2f637b;
@@ -64,24 +64,31 @@
 h1,
 h2 {
   font-family: "Roboto", sans-serif;
-  color: #e0a053;
+  color: #2f637b;
+  padding-left: 1rem;
 }
 
 h1 {
   font-size: 2.5rem;
   line-height: 1.4;
   margin: 0 0 0.4em;
+  padding-top: 1.5rem;
 }
 
 section > h2::before {
   /* number before each section title */
-  color: #e0a053;
+  color: #EDAA58;
+}
+
+h3 {
+  color: #EDAA58;
+  padding-left: 1rem;
 }
 
 p {
   font-size: 1.5rem;
   line-height: 1.5;
-  color: #e0a053;
+  padding: 0 1rem;
 }
 p a {
   color: #2f637b;
@@ -120,43 +127,85 @@ img {
   max-width: 100%;
 }
 
+nav {
+  display: flex;
+  flex-direction: column;
+  list-style-image: url(../../assets/branding/sun_25.png);
+}
+
 .intro {
+  grid-area: intro;
+}
+
+.main {
+  grid-area: main;
+  background-image: url(../../assets/images/cloudbody.jpg);
+}
+
+.banner {
+  grid-area: banner;
+}
+
+.summary {
+  grid-area: summary;
+}
+
+.preamble {
+  grid-area: preamble;
+}
+
+#zen-intro::before {
+  content: url(../../assets/branding/sun_100.png);
+  grid-area: zen;
+}
+
+.sidebar {
+  grid-area: side;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 100px 1fr 2fr;
+  grid-template-areas: "zen banner summary" "preamble preamble preamble";
   background-image: url(../../assets/images/sunset_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  z-index: 10;
 }
 
-@media (min-width: 700px) and (max-width: 1023px) {
-  nav {
-    display: flex;
-  }
+.summary {
+  color: #fff;
 }
+
+.preamble {
+  color: #fff;
+}
+
+.sidebar {
+  background-color: rgba(224, 160, 83, 0.25);
+}
+
+.requirements {
+  background-color: rgba(76, 160, 199, 0.5);
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../assets/images/sunset_2.jpg);
+  height: 150px;
+}
+
 @media (min-width: 1024px) {
   .page-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .intro {
-    flex-wrap: row;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "intro intro" "main side";
   }
 
   .main {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    flex-direction: column;
-  }
-
-  nav {
-    display: flex;
+    background-attachment: fixed;
   }
 }
 
