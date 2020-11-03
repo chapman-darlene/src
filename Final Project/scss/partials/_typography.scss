@@ -1,9 +1,9 @@
 @import 'fonts';
-
+@import 'colors';
 h1,
 h2 {
   font-family: $primary-font;
-  color: $color-2;
+  color: $color-3;
 }
 
 h1 {
@@ -39,6 +39,7 @@ p {
   font-size: 1.5rem;
   line-height: 1.5;
   color: $color-2;
+  
 
   a {
     color: $color-1;
