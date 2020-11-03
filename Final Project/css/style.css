@@ -162,6 +162,10 @@ nav {
   background-color: #EDAA58;
 }
 
+.zen-resources {
+  background-color: #2f637b;
+}
+
 .intro {
   display: grid;
   grid-template-columns: 100px 1fr 2fr;
