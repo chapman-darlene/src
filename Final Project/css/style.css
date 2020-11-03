@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap");
+.cd-primary-nav {
+  background-color: #2f637b;
+  margin: 1rem;
+  max-width: 50%;
+}
+.cd-primary-nav li {
+  padding: 12px;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1px #050505;
+}
+.cd-primary-nav li:hover {
+  background-color: #3d81a0;
+}
+.cd-primary-nav li a {
+  color: #EDAA58;
+}
+.cd-primary-nav li a:active {
+  color: #fff;
+}
+
+.cd-secondary-nav {
+  background-color: #EDAA58;
+  margin: 1rem;
+  max-width: 50%;
+  opacity: 0.8;
+}
+.cd-secondary-nav li {
+  padding: 12px;
+  border-radius: 0.25em;
+}
+.cd-secondary-nav li:hover {
+  background-color: #f2c186;
+}
+.cd-secondary-nav li a {
+  color: #000000;
+  width: 100%;
+}
+.cd-secondary-nav li a:active {
+  color: #fff;
+}
+
+.design-archives {
+  padding: 1rem;
+}
+.design-archives h3 {
+  margin: 1rem;
+}
+.design-archives ul {
+  display: flex;
+  justify-content: space-around;
+}
+.design-archives ul a {
+  color: #EDAA58;
+}
+.design-archives ul a:hover {
+  color: #2f637b;
+  text-decoration: underline;
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: #2f637b;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  margin: 0 0 0.4em;
+  padding-top: 1.5rem;
+}
+
+section > h2::before {
+  /* number before each section title */
+  color: #EDAA58;
+}
+
+h3 {
+  color: #EDAA58;
+  padding-left: 1rem;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 0 1rem;
+  color: #EDAA58;
+}
+p a {
+  color: #2f637b;
+  text-decoration: none;
+}
+p a:hover {
+  color: #707070;
+  text-decoration: underline;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  list-style-image: url(../../assets/branding/sun_25.png);
+}
+
+.intro {
+  grid-area: intro;
+}
+
+.main {
+  grid-area: main;
+  background-image: url(../../assets/images/cloudbody.jpg);
+}
+
+.banner {
+  grid-area: banner;
+}
+
+.summary {
+  grid-area: summary;
+}
+
+.preamble {
+  grid-area: preamble;
+}
+
+#zen-intro::before {
+  content: url(../../assets/branding/sun_100.png);
+  grid-area: zen;
+}
+
+.sidebar {
+  grid-area: side;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 100px 1fr 2fr;
+  grid-template-areas: "zen banner summary" "preamble preamble preamble";
+  background-image: url(../../assets/images/sunset_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.summary {
+  color: #fff;
+}
+
+.preamble {
+  color: #fff;
+}
+
+.sidebar {
+  background-color: rgba(224, 160, 83, 0.25);
+}
+
+.requirements {
+  background-color: rgba(76, 160, 199, 0.5);
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../assets/images/sunset_2.jpg);
+  height: 150px;
+}
+
+@media (min-width: 1024px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "intro intro" "main side";
+  }
+
+  .main {
+    background-attachment: fixed;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
