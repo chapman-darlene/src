@@ -1,5 +1,5 @@
-.cd-primary-nav {
-   background-color: $color-1;
+.zen-resources {
+   
    margin: 1rem;
    max-width: 50%;
     li {
@@ -11,7 +11,7 @@
             
         }
         a {
-            color: $color-2;
+            color: $color-5;
             &:active {
                 color: $color-5;
             }
@@ -19,8 +19,8 @@
         }  
     }
 }
-.cd-secondary-nav {
-    background-color: $color-2;
+.design-selection {
+    
     margin: 1rem;
     max-width: 50%;
     opacity: 0.8;
