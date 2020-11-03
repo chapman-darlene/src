@@ -24,56 +24,102 @@ img {
 	max-width: 100%;
 }
 
-
-//UPDATE!
-.intro {
-  	background-image: url(../../assets/images/sunset_1.jpg);
-	background-repeat: no-repeat;
-    background-size: cover;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	box-shadow: 0 1px 1px rgba(#000, .1);
-	z-index: 10;
+nav {
+    display: flex;
+    flex-direction: column;
+    list-style-image: url(../../assets/branding/sun_25.png);
 }
 
 
+.intro {
+    grid-area: intro;
+}
 
-// #zen-intro::after {
-//     content: "url(../../assets/images/logo.png), z";
-// }
+.main {
+    grid-area: main;
+    background-image: url(../../assets/images/cloudbody.jpg);
+}
+
+.banner {
+    grid-area: banner;
+}
+
+.summary {
+    grid-area: summary;
+}
+
+.preamble {
+    grid-area: preamble;
+}
+
+#zen-intro::before {
+    content: url(../../assets/branding/sun_100.png);
+    grid-area: zen;
+}
+
+.sidebar {
+    grid-area: side;
+}
+
+//UPDATE!
+.intro {
+    // display:flex;
+    // flex-flow: row wrap;
+    display:grid;
+    grid-template-columns: 100px 1fr 2fr;
+    grid-template-areas: 
+    "zen banner summary"
+    "preamble preamble preamble";
+  	background-image: url(../../assets/images/sunset_1.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.summary {
+    color: $color-5;
+  }
+  
+.preamble {
+    color: $color-5;
+}
+
+.sidebar{
+    background-color: $color-2-opacity;
+}
+
+.requirements {
+    background-color: $color-1-opacity;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/images/sunset_2.jpg);
+    height: 150px;
+}
 
 //UPDATE
 @include phone {
-
-    nav {
-        display: flex;
-    }
+ 
 
 }
 
 //UPDATE
 @include desktop {
 
-    .page-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .intro {
-      flex-wrap: row;
-    }
-
-    .main {
-        flex-direction: column;
+    .page-wrapper {       
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+        "intro intro"
+        "main side"  
     }
 
-    .sidebar {
-        flex-direction: column;
-    }
-
-    nav {
-        display: flex;
-    }
+    .main{
+       background-attachment: fixed;
+    }   
 
 }
