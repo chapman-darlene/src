@@ -59,6 +59,7 @@ nav {
 
 .sidebar {
     grid-area: side;
+    background-color: $color-2;
 }
 
 .zen-resources {
@@ -88,9 +89,7 @@ nav {
     color: $color-5;
 }
 
-.sidebar{
-    background-color: $color-2-opacity;
-}
+
 
 .requirements {
     background-color: $color-1-opacity;

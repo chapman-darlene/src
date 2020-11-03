@@ -2,44 +2,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap");
-.cd-primary-nav {
-  background-color: #2f637b;
+.zen-resources {
   margin: 1rem;
   max-width: 50%;
 }
-.cd-primary-nav li {
+.zen-resources li {
   padding: 12px;
   border-radius: 0.25em;
   box-shadow: 0 0 1px #050505;
 }
-.cd-primary-nav li:hover {
+.zen-resources li:hover {
   background-color: #3d81a0;
 }
-.cd-primary-nav li a {
-  color: #EDAA58;
+.zen-resources li a {
+  color: #fff;
 }
-.cd-primary-nav li a:active {
+.zen-resources li a:active {
   color: #fff;
 }
 
-.cd-secondary-nav {
-  background-color: #EDAA58;
+.design-selection {
   margin: 1rem;
   max-width: 50%;
   opacity: 0.8;
 }
-.cd-secondary-nav li {
+.design-selection li {
   padding: 12px;
   border-radius: 0.25em;
 }
-.cd-secondary-nav li:hover {
+.design-selection li:hover {
   background-color: #f2c186;
 }
-.cd-secondary-nav li a {
+.design-selection li a {
   color: #000000;
   width: 100%;
 }
-.cd-secondary-nav li a:active {
+.design-selection li a:active {
   color: #fff;
 }
 
@@ -161,6 +159,7 @@ nav {
 
 .sidebar {
   grid-area: side;
+  background-color: #EDAA58;
 }
 
 .zen-resources {
@@ -182,10 +181,6 @@ nav {
 
 .preamble {
   color: #fff;
-}
-
-.sidebar {
-  background-color: rgba(224, 160, 83, 0.25);
 }
 
 .requirements {
