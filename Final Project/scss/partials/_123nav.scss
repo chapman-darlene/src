@@ -6,6 +6,7 @@
         margin-bottom: 1rem;
         border-radius: 0.25em;
         box-shadow: 0 0 1px rgb(5, 5, 5);
+        list-style-image: url(../../assets/branding/sun_blue_25.png);
         &:hover {
             background-color: lighten($color-1, 10%);
             
