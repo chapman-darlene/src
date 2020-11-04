@@ -20,109 +20,114 @@ a {
 	text-decoration: none;
 }
 
-img {
-	max-width: 100%;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    list-style-image: url(../../assets/branding/sun_25.png);
-}
-
-
-.intro {
-    grid-area: intro;
-}
-
-.main {
-    grid-area: main;
-    background-image: url(../../assets/images/cloudbody.jpg);
-}
-
-.banner {
+header {
     grid-area: banner;
+    margin-top: 4rem;
+    margin-left: 5rem;
 }
 
+// nav {
+//     // display: flex;
+//     // flex-direction: column;
+    
+// }
+
+.page-wrapper{
+    background-image: url(../../assets/images/cloudbody.jpg);
+
+     @include MQ(L) {
+        display:grid;      
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+        "intro intro"
+        "main side";    
+    }
+ }
+
+ .intro {
+
+    @include MQ(S){
+        background-image: url(../assets/images/sunset_1_small.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @include MQ(L){
+        grid-area: intro;
+        display:grid;
+        grid-template-columns:  1fr 25%;
+        grid-template-areas: 
+        "banner zen"
+        "summary summary"
+        "preamble preamble";
+        background-image: url(../../assets/images/sunset_1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+ }
+
+ 
 .summary {
     grid-area: summary;
+    background-color: $color-1;
+
+    @include MQ(L){
+        margin: -2rem 38% 2rem 5rem;
+    }
 }
 
 .preamble {
     grid-area: preamble;
+    background-color: $color-5;
+    
+    @include MQ(L){
+        margin: 0rem 38% 5rem 5rem;
+    }
+    
 }
 
-#zen-intro::before {
-    content: url(../../assets/branding/sun_100.png);
-    grid-area: zen;
+.explanation, .participation, .benefits, .requirements {
+    background-color: $color-5;
+
+    @include MQ(L){
+        margin: 5rem;
+    }
 }
 
-.sidebar {
+ .sidebar {
     grid-area: side;
-    background-color: $color-2;
+    background-color: $color-2-opacity; 
+    
+    @include MQ(L) {
+        .sidebar {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+    }
 }
 
 .zen-resources {
     background-color: $color-1;
 }
-
-//UPDATE!
-.intro {
-    // display:flex;
-    // flex-flow: row wrap;
-    display:grid;
-    grid-template-columns: 100px 1fr 2fr;
-    grid-template-areas: 
-    "zen banner summary"
-    "preamble preamble preamble";
-  	background-image: url(../../assets/images/sunset_1.jpg);
-	background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-.summary {
-    color: $color-5;
-  }
-  
-.preamble {
-    color: $color-5;
-}
-
-
-
-.requirements {
-    background-color: $color-1-opacity;
-}
-
 footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-image: url(../../assets/images/sunset_2.jpg);
-    height: 150px;
+    background-color: $color-1-opacity;
+    min-height: 150px;
 }
 
-//UPDATE
-@include phone {
- 
 
-}
 
-//UPDATE
-@include desktop {
-
-    .page-wrapper {       
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-areas:
-        "intro intro"
-        "main side"  
+@include MQ(L){
+    .main {
+        grid-area: main;
+        background-attachment: fixed;
     }
-
-    .main{
-       background-attachment: fixed;
-    }   
-
+     
+    #zen-intro::after {
+        content: url(../assets/branding/sun_250.png);
+        grid-area: zen;
+    }    
 }

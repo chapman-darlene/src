@@ -1,15 +1,15 @@
 // Responsive media query
-$phone-width: 700px;
+$phone-width: 300px;
 $desktop-width: 1024px;
 
-@mixin phone {
-  @media (min-width: #{$phone-width}) and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
+@mixin MQ($canvas) {
+  @if $canvas == S{
+    @media (min-width: $phone-width) {
+      @content;
+    }
+  } @else if $canvas == L {
+    @media (min-width: $desktop-width) {
+      @content;
+    }
   }
 }
