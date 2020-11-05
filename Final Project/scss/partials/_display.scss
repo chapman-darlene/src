@@ -16,13 +16,21 @@ body {
     font-family: $primary-font;  
 }
 
+// small view little margin, large view no margin
+html,
+body {
+    margin: 5px;
+    @include MQ(L) {
+        margin: 0;
+    }
+}
+
 a {
 	text-decoration: none;
 }
 
 header {
     grid-area: banner;
-    margin-top: 4rem;
     @include MQ(L){
         margin-left: 5rem;
     }    
@@ -64,7 +72,7 @@ header {
  
 .summary {
     grid-area: summary;
-    background-color: $color-1;
+    background-color: $color-5;
 
     @include MQ(L){
         margin: -2rem 38% 2rem 5rem;
