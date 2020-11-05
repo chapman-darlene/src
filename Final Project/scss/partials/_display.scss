@@ -36,6 +36,8 @@ header {
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
         "intro intro"
+        "summary side"
+        "preamble side"
         "main side";    
     }
  }
@@ -53,9 +55,7 @@ header {
         display:grid;
         grid-template-columns:  1fr 25%;
         grid-template-areas: 
-        "banner zen"
-        "summary summary"
-        "preamble preamble";
+        "banner zen";
         background-image: url(../../assets/images/sunset_1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
