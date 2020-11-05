@@ -2,62 +2,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap");
-.zen-resources {
+.zen {
   margin: 1rem;
   max-width: 50%;
 }
-.zen-resources li {
+.zen li {
   margin-bottom: 1rem;
   border-radius: 0.25em;
   box-shadow: 0 0 1px #050505;
-  list-style-image: url(../../assets/branding/sun_blue_25.png);
+  list-style-image: none;
 }
-.zen-resources li:hover {
+.zen li:hover {
   background-color: #3d81a0;
 }
-.zen-resources li a {
-  color: #fff;
+.zen li a {
+  color: black;
 }
-.zen-resources li a:active {
+.zen li a:active {
   color: #fff;
 }
 
-.design-selection {
+.design-selection, .zen-resources {
   margin: 1rem;
   max-width: 50%;
-  opacity: 0.8;
+  text-align: left;
 }
-.design-selection li {
-  list-style-image: url(../../assets/branding/sun_25.png);
-  padding: 12px;
+.design-selection li, .zen-resources li {
+  font-size: 1.5rem;
+  list-style-type: none;
+  width: 100%;
+  margin: 2rem;
   border-radius: 0.25em;
 }
-.design-selection li:hover {
-  background-color: #f2c186;
+.design-selection li:hover, .zen-resources li:hover {
+  background-color: #f7d9b4;
 }
-.design-selection li a {
+.design-selection li a, .zen-resources li a {
   color: #000000;
   width: 100%;
 }
-.design-selection li a:active {
+.design-selection li a:active, .zen-resources li a:active {
   color: #fff;
 }
 
 .design-archives {
+  list-style-image: url(../../assets/branding/sun_25.png);
   padding: 1rem;
-}
-.design-archives h3 {
-  margin: 1rem;
+  background-color: #2f637b;
 }
 .design-archives ul {
   display: flex;
   justify-content: space-around;
 }
 .design-archives ul a {
-  color: #EDAA58;
+  font-size: 1.8rem;
+  color: black;
 }
 .design-archives ul a:hover {
-  color: #2f637b;
+  color: #EDAA58;
   text-decoration: underline;
 }
 
@@ -195,16 +197,22 @@ header {
 .sidebar {
   grid-area: side;
   background-color: rgba(224, 160, 83, 0.5);
+  color: black;
+}
+.sidebar h3 {
+  padding: 0.5rem;
+  color: #2f637b;
+  font-size: 2.5rem;
 }
 @media (min-width: 1024px) {
-  .sidebar .sidebar {
+  .sidebar {
     margin-left: 2rem;
     margin-right: 2rem;
   }
 }
 
-.zen-resources {
-  background-color: #2f637b;
+.design-archives h3 {
+  color: #EDAA58;
 }
 
 footer {

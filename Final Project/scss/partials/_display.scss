@@ -91,18 +91,24 @@ header {
  .sidebar {
     grid-area: side;
     background-color: $color-2-opacity; 
-    
+    color: black;
+    h3 {
+        padding: .5rem;
+           color: $color-1;
+         font-size: 2.5rem;
+           
+       }
     @include MQ(L) {
-        .sidebar {
             margin-left: 2rem;
             margin-right: 2rem;
-        }
+        
     }
 }
+.design-archives h3 {
+    color: $color-2;
+    
+  }
 
-.zen-resources {
-    background-color: $color-1;
-}
 
 footer {
     display: flex;
