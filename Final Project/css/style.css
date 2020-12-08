@@ -82,7 +82,7 @@ section > h2::before {
 }
 
 h3 {
-  color: #EDAA58;
+  color: #2f637b;
   padding-left: 1rem;
 }
 
@@ -90,11 +90,13 @@ p {
   font-size: 1.5rem;
   line-height: 1.5;
   padding: 0 1rem;
-  color: #EDAA58;
+  color: #707070;
+  text-decoration: none;
 }
 p a {
-  color: #2f637b;
+  color: #EDAA58;
   text-decoration: none;
+  font-weight: bold;
 }
 p a:hover {
   color: #707070;
@@ -121,13 +123,23 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+html,
+body {
+  margin: 5px;
+}
+@media (min-width: 1024px) {
+  html,
+body {
+    margin: 0;
+  }
+}
+
 a {
   text-decoration: none;
 }
 
 header {
   grid-area: banner;
-  margin-top: 4rem;
 }
 @media (min-width: 1024px) {
   header {
@@ -167,7 +179,7 @@ header {
 
 .summary {
   grid-area: summary;
-  background-color: #2f637b;
+  background-color: #fff;
 }
 @media (min-width: 1024px) {
   .summary {
