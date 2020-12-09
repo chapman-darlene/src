@@ -138,15 +138,6 @@ a {
   text-decoration: none;
 }
 
-header {
-  grid-area: banner;
-}
-@media (min-width: 1024px) {
-  header {
-    margin-left: 5rem;
-  }
-}
-
 .page-wrapper {
   background-image: url(../../assets/images/cloudbody.jpg);
 }
@@ -154,10 +145,13 @@ header {
   .page-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-areas: "intro intro" "summary side" "preamble side" "main side";
+    grid-template-areas: "intro intro" "main side";
   }
 }
 
+.intro {
+  grid-area: intro;
+}
 @media (min-width: 300px) {
   .intro {
     background-image: url(../assets/images/sunset_1_small.jpg);
@@ -169,31 +163,77 @@ header {
   .intro {
     grid-area: intro;
     display: grid;
-    grid-template-columns: 1fr 25%;
-    grid-template-areas: "banner zen";
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "banner zen" "summary zen" "preamble zen";
     background-image: url(../../assets/images/sunset_1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 }
 
+header {
+  grid-area: banner;
+}
+@media (min-width: 300px) {
+  header {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+  header h1 {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-size: 3rem;
+  }
+  header h2 {
+    font-family: "Crimson Text", serif;
+    color: #2f637b;
+    font-size: 2rem;
+    margin-top: -1rem;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    margin: 5rem;
+  }
+  header h1 {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-size: 8rem;
+  }
+  header h2 {
+    font-family: "Crimson Text", serif;
+    color: #2f637b;
+    font-size: 4rem;
+    margin-top: -3rem;
+  }
+}
+
+#zen-intro::after {
+  content: url(../../assets/branding/sun_250.png);
+  display: flex;
+  justify-content: center;
+  grid-area: zen;
+}
+
 .summary {
   grid-area: summary;
   background-color: #fff;
+  color: #707070;
 }
 @media (min-width: 1024px) {
   .summary {
-    margin: -2rem 38% 2rem 5rem;
+    margin: 1rem 5rem 1rem 5rem;
   }
 }
 
 .preamble {
   grid-area: preamble;
   background-color: #fff;
+  margin-bottom: 2rem;
 }
 @media (min-width: 1024px) {
   .preamble {
-    margin: 0rem 38% 5rem 5rem;
+    margin: 1rem 5rem 5rem 5rem;
   }
 }
 
@@ -240,11 +280,6 @@ footer {
   .main {
     grid-area: main;
     background-attachment: fixed;
-  }
-
-  #zen-intro::after {
-    content: url(../assets/branding/sun_250.png);
-    grid-area: zen;
   }
 }
 

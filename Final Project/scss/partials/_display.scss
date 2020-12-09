@@ -29,13 +29,6 @@ a {
 	text-decoration: none;
 }
 
-header {
-    grid-area: banner;
-    @include MQ(L){
-        margin-left: 5rem;
-    }    
-}
-
 .page-wrapper{
     background-image: url(../../assets/images/cloudbody.jpg);
 
@@ -44,13 +37,13 @@ header {
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
         "intro intro"
-        "summary side"
-        "preamble side"
-        "main side";    
+        "main side";       
     }
  }
 
  .intro {
+
+    grid-area: intro;
 
     @include MQ(S){
         background-image: url(../assets/images/sunset_1_small.jpg);
@@ -61,30 +54,81 @@ header {
     @include MQ(L){
         grid-area: intro;
         display:grid;
-        grid-template-columns:  1fr 25%;
+        grid-template-columns:  2fr 1fr;
         grid-template-areas: 
-        "banner zen";
+        "banner zen"
+        "summary zen"
+        "preamble zen";
         background-image: url(../../assets/images/sunset_1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
  }
+
+ header {
+    grid-area: banner;
+
+    @include MQ(S){ 
+        margin-left: 1rem;
+        margin-bottom: 2rem;       
+        h1 {
+            font-family: $primary-font;
+            color: $color-5;
+            font-size: 3rem;
+        }
+        h2 {
+            font-family: $secondary-font;
+            color: $color-1;
+            font-size: 2rem;
+            margin-top: -1rem;
+        }
+
+    }
+    @include MQ(L){
+        margin: 5rem;
+        
+        h1 {
+            font-family: $primary-font;
+            color: $color-5;
+            font-size: 8rem;
+        }
+        h2 {
+            font-family: $secondary-font;
+            color: $color-1;
+            font-size: 4rem;
+            margin-top: -3rem;
+        }
+    }
+}
+
+
+#zen-intro::after {
+    content: url(../../assets/branding/sun_250.png);
+    display: flex;
+    justify-content: center;
+    grid-area: zen;
+}
+
+
  
 .summary {
+
     grid-area: summary;
     background-color: $color-5;
+    color: $color-3;    
 
     @include MQ(L){
-        margin: -2rem 38% 2rem 5rem;
+        margin:1rem 5rem 1rem 5rem;
     }
 }
 
 .preamble {
     grid-area: preamble;
     background-color: $color-5;
+    margin-bottom: 2rem;
     
     @include MQ(L){
-        margin: 0rem 38% 5rem 5rem;
+        margin:1rem 5rem 5rem 5rem;
     } 
 }
 
@@ -115,8 +159,7 @@ header {
 .design-archives h3 {
     color: $color-2;
 
-  }
-
+}
 
 footer {
     display: flex;
@@ -132,9 +175,4 @@ footer {
         grid-area: main;
         background-attachment: fixed;
     }
-     
-    #zen-intro::after {
-        content: url(../assets/branding/sun_250.png);
-        grid-area: zen;
-    }    
 }
