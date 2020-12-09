@@ -29,9 +29,16 @@ a {
 	text-decoration: none;
 }
 
-.page-wrapper{
-    background-image: url(../../assets/images/cloudbody.jpg);
+ul {
+    font-family: $primary-font;
+}
 
+.page-wrapper{
+
+    background-image: url(../../assets/images/AdobeStock_247234683.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
      @include MQ(L) {
         display:grid;      
         grid-template-columns: 2fr 1fr;
@@ -70,7 +77,8 @@ a {
 
     @include MQ(S){ 
         margin-left: 1rem;
-        margin-bottom: 2rem;       
+        margin-bottom: 4rem;
+          
         h1 {
             font-family: $primary-font;
             color: $color-5;
@@ -101,21 +109,32 @@ a {
     }
 }
 
+@include MQ(L){
+    #zen-intro::after {
+        content: url(../../assets/branding/sun_250.png);
+        display: flex;
+        justify-content: center;
+        grid-area: zen;
+        animation: garden-grow 7s forwards ease-in;   
+    }
 
-#zen-intro::after {
-    content: url(../../assets/branding/sun_250.png);
-    display: flex;
-    justify-content: center;
-    grid-area: zen;
+    @keyframes garden-grow {
+        from {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(100%);
+        }
+    }
 }
-
 
  
 .summary {
 
     grid-area: summary;
-    background-color: $color-5;
-    color: $color-3;    
 
     @include MQ(L){
         margin:1rem 5rem 1rem 5rem;
@@ -124,42 +143,60 @@ a {
 
 .preamble {
     grid-area: preamble;
-    background-color: $color-5;
-    margin-bottom: 2rem;
-    
+
     @include MQ(L){
         margin:1rem 5rem 5rem 5rem;
     } 
 }
 
-.explanation, .participation, .benefits, .requirements {
-    background-color: $color-5;
 
-    @include MQ(L){
-        margin: 5rem;
-    }
+.explanation, .participation, .benefits, .requirements, .preamble, .summary {
+    background-color: $color-5;
+    padding: 2rem;
+    margin-bottom: 10rem;
 }
 
  .sidebar {
     grid-area: side;
     background-color: $color-2-opacity; 
     color: black;
-    h3 {
-        padding: .5rem;
-           color: $color-1;
-         font-size: 2.5rem;
-           
-       }
+
     @include MQ(L) {
-            margin-left: 2rem;
-            margin-right: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        opacity: 0;
+        animation: fade-in 2s forwards ease-in;
         
     }
 }
-.design-archives h3 {
-    color: $color-2;
 
+div.wrapper {
+    padding: 1rem;
 }
+
+h3 {
+    font-family: $secondary-font;
+     text-align: left;
+     padding: .5rem;
+     color: $color-1;
+     font-size: 3rem;
+
+     @include MQ(L) {
+         margin-left: 50px;
+     }
+ }
+
+
+@keyframes fade-in {
+ from {
+     opacity: 0;
+ }
+
+ to {
+     opacity: 1;
+ }
+}
+
 
 footer {
     display: flex;

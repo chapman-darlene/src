@@ -1,72 +1,94 @@
-.zen{
-   
-   margin: 1rem;
-   max-width: 50%;
+.zen {
+
+    margin: 1rem;
+    max-width: 50%;
+
     li {
         margin-bottom: 1rem;
         border-radius: 0.25em;
         box-shadow: 0 0 1px rgb(5, 5, 5);
         list-style-image: none;
+
         &:hover {
             background-color: lighten($color-1, 10%);
-            
+
         }
+
         a {
-            color: black;
+            color: $color-3;
+
             &:active {
                 color: $color-5;
             }
-            
-        }  
+
+        }
     }
 }
-.design-selection, .zen-resources {
-    
+
+.design-selection,
+.zen-resources {
+
     margin: 1rem;
-    max-width: 50%;
+    max-width: 80%;
     text-align: left;
-    
+    margin-left: 1rem;
     li {
-       
-        font-size: 1.5rem;
-        
+        padding: 1rem;
+        font-size: 1.75rem;
         list-style-type: none;
         width: 100%;
-        margin: 2rem;
+        margin: 1rem;
         border-radius: 0.25em;
+
         &:hover {
             background-color: lighten($color-2, 20%);
         }
+
         a {
-            
+
             color: #000000;
-           width: 100%;
-           &:active {
-            color: $color-5;
-        }
+            width: 100%;
+
+            &:active {
+                color: $color-5;
+            }
         }
     }
 }
 
 .design-archives {
-    list-style-image: url(../../assets/branding/sun_25.png);
-    padding: 1rem;
-    background-color: $color-1;
+    margin-top: 2rem;
+    padding: 5rem;
+    background-repeat: no-repeat;
+    background-size: 375px 375px;
+    background-position: center;
+    background-image: url(../../assets/branding/sun_blue_500.png);
+
+
+
     ul {
-        display: flex;
-        justify-content: space-around;
+        text-align: center;
+        list-style-type: none;
+        margin-right: 20px;
+
         a {
-           
-            font-size: 1.8rem;
-            color: black;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: $color-3;
+
             &:hover {
-                color: $color-2;
+                color: $color-5;
                 text-decoration: underline;
             }
         }
-        //img {}
-            
-
-        
     }
+}
+
+.design-archives h3.archives {
+    text-align: center;
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-size: 5rem;
+    font-weight: 100;
+    color: $color-3;
 }

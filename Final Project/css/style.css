@@ -16,51 +16,72 @@
   background-color: #3d81a0;
 }
 .zen li a {
-  color: black;
+  color: #000;
 }
 .zen li a:active {
   color: #fff;
 }
 
-.design-selection, .zen-resources {
+.design-selection,
+.zen-resources {
   margin: 1rem;
-  max-width: 50%;
+  max-width: 80%;
   text-align: left;
+  margin-left: 1rem;
 }
-.design-selection li, .zen-resources li {
-  font-size: 1.5rem;
+.design-selection li,
+.zen-resources li {
+  padding: 1rem;
+  font-size: 1.75rem;
   list-style-type: none;
   width: 100%;
-  margin: 2rem;
+  margin: 1rem;
   border-radius: 0.25em;
 }
-.design-selection li:hover, .zen-resources li:hover {
+.design-selection li:hover,
+.zen-resources li:hover {
   background-color: #f7d9b4;
 }
-.design-selection li a, .zen-resources li a {
+.design-selection li a,
+.zen-resources li a {
   color: #000000;
   width: 100%;
 }
-.design-selection li a:active, .zen-resources li a:active {
+.design-selection li a:active,
+.zen-resources li a:active {
   color: #fff;
 }
 
 .design-archives {
-  list-style-image: url(../../assets/branding/sun_25.png);
-  padding: 1rem;
-  background-color: #2f637b;
+  margin-top: 2rem;
+  padding: 5rem;
+  background-repeat: no-repeat;
+  background-size: 375px 375px;
+  background-position: center;
+  background-image: url(../../assets/branding/sun_blue_500.png);
 }
 .design-archives ul {
-  display: flex;
-  justify-content: space-around;
+  text-align: center;
+  list-style-type: none;
+  margin-right: 20px;
 }
 .design-archives ul a {
-  font-size: 1.8rem;
-  color: black;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #000;
 }
 .design-archives ul a:hover {
-  color: #EDAA58;
+  color: #fff;
   text-decoration: underline;
+}
+
+.design-archives h3.archives {
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 10px;
+  font-size: 5rem;
+  font-weight: 100;
+  color: #000;
 }
 
 h1,
@@ -90,7 +111,7 @@ p {
   font-size: 1.5rem;
   line-height: 1.5;
   padding: 0 1rem;
-  color: #707070;
+  color: #000;
   text-decoration: none;
 }
 p a {
@@ -99,7 +120,7 @@ p a {
   font-weight: bold;
 }
 p a:hover {
-  color: #707070;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -138,8 +159,14 @@ a {
   text-decoration: none;
 }
 
+ul {
+  font-family: "Roboto", sans-serif;
+}
+
 .page-wrapper {
-  background-image: url(../../assets/images/cloudbody.jpg);
+  background-image: url(../../assets/images/AdobeStock_247234683.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 @media (min-width: 1024px) {
   .page-wrapper {
@@ -177,7 +204,7 @@ header {
 @media (min-width: 300px) {
   header {
     margin-left: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
   header h1 {
     font-family: "Roboto", sans-serif;
@@ -208,17 +235,28 @@ header {
   }
 }
 
-#zen-intro::after {
-  content: url(../../assets/branding/sun_250.png);
-  display: flex;
-  justify-content: center;
-  grid-area: zen;
-}
+@media (min-width: 1024px) {
+  #zen-intro::after {
+    content: url(../../assets/branding/sun_250.png);
+    display: flex;
+    justify-content: center;
+    grid-area: zen;
+    animation: garden-grow 7s forwards ease-in;
+  }
 
+  @keyframes garden-grow {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(100%);
+    }
+  }
+}
 .summary {
   grid-area: summary;
-  background-color: #fff;
-  color: #707070;
 }
 @media (min-width: 1024px) {
   .summary {
@@ -228,8 +266,6 @@ header {
 
 .preamble {
   grid-area: preamble;
-  background-color: #fff;
-  margin-bottom: 2rem;
 }
 @media (min-width: 1024px) {
   .preamble {
@@ -237,13 +273,10 @@ header {
   }
 }
 
-.explanation, .participation, .benefits, .requirements {
+.explanation, .participation, .benefits, .requirements, .preamble, .summary {
   background-color: #fff;
-}
-@media (min-width: 1024px) {
-  .explanation, .participation, .benefits, .requirements {
-    margin: 5rem;
-  }
+  padding: 2rem;
+  margin-bottom: 10rem;
 }
 
 .sidebar {
@@ -251,22 +284,40 @@ header {
   background-color: rgba(224, 160, 83, 0.5);
   color: black;
 }
-.sidebar h3 {
-  padding: 0.5rem;
-  color: #2f637b;
-  font-size: 2.5rem;
-}
 @media (min-width: 1024px) {
   .sidebar {
     margin-left: 2rem;
     margin-right: 2rem;
+    opacity: 0;
+    animation: fade-in 2s forwards ease-in;
   }
 }
 
-.design-archives h3 {
-  color: #EDAA58;
+div.wrapper {
+  padding: 1rem;
 }
 
+h3 {
+  font-family: "Crimson Text", serif;
+  text-align: left;
+  padding: 0.5rem;
+  color: #2f637b;
+  font-size: 3rem;
+}
+@media (min-width: 1024px) {
+  h3 {
+    margin-left: 50px;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 footer {
   display: flex;
   flex-flow: row wrap;
