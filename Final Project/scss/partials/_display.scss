@@ -44,7 +44,8 @@ ul {
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
         "intro intro"
-        "main side";       
+        "main side"
+        "footer side";     
     }
  }
 
@@ -205,7 +206,67 @@ footer {
     align-items: center;
     background-color: $color-1-opacity;
     min-height: 150px;
+    grid-area: footer;
 }
+
+footer a{
+    color: $color-1;
+}
+
+footer a:hover{
+    color: $color-6;
+}
+
+footer a:nth-child(1)::before {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2px 5px;
+    content: url('../../assets/icons/h5.png');
+}
+
+footer a:nth-child(1) {
+    text-align: center;
+}
+
+footer a:nth-child(2)::before {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2px 5px;
+    content: url('../../assets/icons/jigsaw.png');
+}
+footer a:nth-child(2) {
+    text-align: center;
+}
+
+footer a:nth-child(3)::before {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2px 5px;
+    content: url('../../assets/icons/css-icon.png');
+}
+footer a:nth-child(3) {
+    text-align: center;
+}
+footer a:nth-child(4)::before {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2px 5px;
+    content: url('../../assets/icons/accessibility.png');
+}
+footer a:nth-child(4) {
+    text-align: center;
+}
+footer a:nth-child(5)::before {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2px 5px;
+    content: url('../../assets/icons/git-icon.png');
+}
+footer a:nth-child(5) {
+    text-align: center;
+}
+
+
 
 @include MQ(L){
     .main {
