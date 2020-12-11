@@ -209,15 +209,31 @@ header {
 }
 @media (min-width: 300px) {
   header {
+    background-image: url("../assets/branding/sun_250_opacity_30.png");
+    background-size: 250px;
+    padding: 8.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
     padding-top: 2rem;
-    padding-left: 1rem;
-    margin-bottom: 2rem;
+    text-align: center;
+    -webkit-animation: grow-small 3s forwards ease-in;
+    animation: grow-small 3s forwards ease-in;
+  }
+  @keyframes grow-small {
+    from {
+      opacity: 0;
+      background-size: 0;
+    }
+    to {
+      opacity: 1;
+      background-size: 250;
+    }
   }
   header h1 {
     font-family: "Roboto", sans-serif;
     color: #fff;
-    font-size: 3rem;
-    padding-top: 0;
+    font-size: 2.5rem;
+    padding-top: 5rem;
   }
   header h2 {
     font-family: "Crimson Text", serif;
@@ -241,22 +257,19 @@ header {
   }
 }
 
-@media (min-width: 300px) {
-  header h1::after {
-    content: url("../assets/branding/sun_50.png");
-    position: absolute;
-    margin-top: 0.5rem;
-    margin-left: 4rem;
-    margin-right: 1.5rem;
-    padding-left: 3rem;
-  }
-}
-@media (min-width: 1024px) {
-  header h1::after {
-    display: none;
-  }
-}
-
+/* header h1::after {
+    @include MQ(S){
+        //content: url('../assets/branding/sun_50.png');
+        position: absolute;
+        margin-top: .5rem;
+        margin-left: 4rem;
+        margin-right: 1.5rem;
+        padding-left: 3rem;
+    }
+    @include MQ(L){
+        display: none;
+    }
+} */
 .preamble::after, .summary::after, .explanation::after, .participation::after, .benefits::after, .requirements::after {
   content: url("../assets/branding/line.svg");
   height: 0;
