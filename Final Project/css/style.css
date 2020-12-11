@@ -226,14 +226,13 @@ header {
     }
     to {
       opacity: 1;
-      background-size: 250;
+      background-size: 250px;
     }
   }
   header h1 {
     font-family: "Roboto", sans-serif;
     color: #fff;
     font-size: 2.5rem;
-    padding-top: 5rem;
   }
   header h2 {
     font-family: "Crimson Text", serif;
@@ -243,6 +242,12 @@ header {
   }
 }
 @media (min-width: 1024px) {
+  header {
+    background-image: none;
+    text-align: left;
+    padding: 0 0 0 2rem;
+    animation: none;
+  }
   header h1 {
     font-family: "Roboto", sans-serif;
     color: #fff;
@@ -253,29 +258,7 @@ header {
     color: #2f637b;
     font-size: 4rem;
     margin-top: -3rem;
-    margin-bottom: 0;
   }
-}
-
-/* header h1::after {
-    @include MQ(S){
-        //content: url('../assets/branding/sun_50.png');
-        position: absolute;
-        margin-top: .5rem;
-        margin-left: 4rem;
-        margin-right: 1.5rem;
-        padding-left: 3rem;
-    }
-    @include MQ(L){
-        display: none;
-    }
-} */
-.preamble::after, .summary::after, .explanation::after, .participation::after, .benefits::after, .requirements::after {
-  content: url("../assets/branding/line.svg");
-  height: 0;
-  margin: 0;
-  padding-top: 0.5rem;
-  padding-bottom: 0;
 }
 
 @media (min-width: 1024px) {
@@ -288,8 +271,8 @@ header {
     -webkit-justify-content: center;
     justify-content: center;
     grid-area: zen;
-    -webkit-animation: garden-grow 5s forwards ease-in;
-    animation: garden-grow 5s forwards ease-in;
+    -webkit-animation: garden-grow 4s forwards ease-in;
+    animation: garden-grow 4s forwards ease-in;
   }
 
   @keyframes garden-grow {
@@ -299,10 +282,18 @@ header {
     }
     to {
       opacity: 1;
-      transform: scale(100%);
+      transform: scale(1);
     }
   }
 }
+.preamble::after, .summary::after, .explanation::after, .participation::after, .benefits::after, .requirements::after {
+  content: url("../assets/branding/line.svg");
+  height: 0;
+  margin: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+}
+
 .summary {
   grid-area: summary;
   padding-top: 0;

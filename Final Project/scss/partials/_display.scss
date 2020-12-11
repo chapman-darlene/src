@@ -101,7 +101,7 @@ ul {
             }
             to {
                 opacity: 1;
-                background-size: 250;
+                background-size: 250px;
             }
         }
           
@@ -109,7 +109,7 @@ ul {
             font-family: $primary-font;
             color: $color-5;
             font-size: 2.5rem;
-            padding-top: 5rem;
+            
         }
         h2 {
             font-family: $secondary-font;
@@ -121,44 +121,25 @@ ul {
     }
     @include MQ(L){
         //margin: 2rem 0 1rem 2rem;
+        background-image:none;
+        text-align:left;
+        padding: 0 0 0 2rem;
+        animation: none;
         
         h1 {
             font-family: $primary-font;
             color: $color-5;
-            font-size: 8rem;
+            font-size: 8rem;            
         }
+
         h2 {
             font-family: $secondary-font;
             color: $color-1;
             font-size: 4rem;
             margin-top: -3rem;
-            margin-bottom: 0;
         }
     }
 }
-
-/* header h1::after {
-    @include MQ(S){
-        //content: url('../assets/branding/sun_50.png');
-        position: absolute;
-        margin-top: .5rem;
-        margin-left: 4rem;
-        margin-right: 1.5rem;
-        padding-left: 3rem;
-    }
-    @include MQ(L){
-        display: none;
-    }
-} */
-
-.preamble::after, .summary::after, .explanation::after, .participation::after, .benefits::after, .requirements::after{
-    content: url('../assets/branding/line.svg');
-    height: 0;
-    margin: 0;
-    padding-top: .5rem;
-    padding-bottom: 0;
-}
-
 
 @include MQ(L){
     #zen-intro::after {
@@ -170,8 +151,8 @@ ul {
         -webkit-justify-content: center;
         justify-content: center;
         grid-area: zen;
-        -webkit-animation:garden-grow 5s forwards ease-in;
-        animation: garden-grow 5s forwards ease-in;   
+        -webkit-animation:garden-grow 4s forwards ease-in;
+        animation: garden-grow 4s forwards ease-in;   
     }
 
     @keyframes garden-grow {
@@ -182,10 +163,19 @@ ul {
 
         to {
             opacity: 1;
-            transform: scale(100%);
+            transform: scale(1);
         }
     }
 }
+
+.preamble::after, .summary::after, .explanation::after, .participation::after, .benefits::after, .requirements::after{
+    content: url('../assets/branding/line.svg');
+    height: 0;
+    margin: 0;
+    padding-top: .5rem;
+    padding-bottom: 0;
+}
+
 
 .summary {
     grid-area: summary;
