@@ -115,6 +115,7 @@ ul {
             color: $color-1;
             font-size: 4rem;
             margin-top: -3rem;
+            margin-bottom: 0;
         }
     }
 }
@@ -133,8 +134,8 @@ header h1::after {
     }
 }
 
-header h2::after {
-    content: url('../assets/icons/line.svg');
+.preamble::after, .summary::after, .explanation::after, .participation::after, .benefits::after, .requirements::after{
+    content: url('../assets/branding/line.svg');
     height: 0;
     margin: 0;
     padding-top: .5rem;
