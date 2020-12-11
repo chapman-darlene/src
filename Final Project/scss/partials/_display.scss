@@ -121,7 +121,7 @@ ul {
 
 header h1::after {
     @include MQ(S){
-        content: url('../../assets/branding/sun_50.png');
+        content: url('../assets/branding/sun_50.png');
         position: absolute;
         margin-top: .5rem;
         margin-left: 4rem;
@@ -144,7 +144,7 @@ header h2::after {
 
 @include MQ(L){
     #zen-intro::after {
-        content: url(../../assets/branding/sun_250.png);
+        content: url('../assets/branding/sun_250.png');
         -webkit-ms-display: flex;
         display: flex;
         width: 100%;
