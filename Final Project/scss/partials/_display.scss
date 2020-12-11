@@ -103,7 +103,7 @@ ul {
 
     }
     @include MQ(L){
-        margin: 2rem 0 1rem 2rem;
+        //margin: 2rem 0 1rem 2rem;
         
         h1 {
             font-family: $primary-font;
@@ -177,7 +177,6 @@ header h2::after {
 .preamble {
     grid-area: preamble;
 }
-
 
 .explanation, .participation, .benefits, .requirements, .preamble, .summary {
     background-color: $color-5;
