@@ -211,7 +211,7 @@ header {
   header {
     padding-top: 2rem;
     padding-left: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
   header h1 {
     font-family: "Roboto", sans-serif;
@@ -228,7 +228,7 @@ header {
 }
 @media (min-width: 1024px) {
   header {
-    margin: 5rem;
+    margin: 2rem 0 1rem 2rem;
   }
   header h1 {
     font-family: "Roboto", sans-serif;
@@ -259,6 +259,14 @@ header {
   }
 }
 
+header h2::after {
+  content: url("../assets/icons/line.svg");
+  height: 0;
+  margin: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+}
+
 @media (min-width: 1024px) {
   #zen-intro::after {
     content: url(../../assets/branding/sun_250.png);
@@ -286,6 +294,7 @@ header {
 }
 .summary {
   grid-area: summary;
+  padding-top: 0;
 }
 
 .preamble {
