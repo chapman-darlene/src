@@ -44,7 +44,8 @@ ul {
     }
     
      @include MQ(L) {
-        display:grid;      
+        display:grid;
+        -ms-display: grid;     
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
         "intro intro"
@@ -68,6 +69,7 @@ ul {
     @include MQ(L){
         grid-area: intro;
         display:grid;
+        -ms-display: grid;
         grid-template-columns:  2fr 1fr;
         grid-template-areas: 
         "banner zen"
@@ -83,8 +85,6 @@ ul {
     grid-area: banner;
 
     @include MQ(S){
-        display: flex;
-        flex-flow: row wrap;
         padding-top: 2rem;
         padding-left: 1rem;
         margin-bottom: 4rem;
@@ -125,6 +125,8 @@ header h1::after {
         content: url('../../assets/branding/sun_50.png');
         position: absolute;
         margin-top: .5rem;
+        margin-left: 4rem;
+        margin-right: 1rem;
         padding-left: 3rem;
     }
     @include MQ(L){
@@ -135,9 +137,14 @@ header h1::after {
 @include MQ(L){
     #zen-intro::after {
         content: url(../../assets/branding/sun_250.png);
+        -webkit-ms-display: flex;
         display: flex;
+        width: 100%;
+        height: 50%;
+        -webkit-justify-content: center;
         justify-content: center;
         grid-area: zen;
+        -webkit-animation:garden-grow 5s forwards ease-in;
         animation: garden-grow 5s forwards ease-in;   
     }
 
@@ -165,7 +172,6 @@ header h1::after {
 
 .explanation, .participation, .benefits, .requirements, .preamble, .summary {
     background-color: $color-5;
-    width: 100%;
 
     @include MQ(S){
         width: 100%;
@@ -189,8 +195,7 @@ header h1::after {
         margin-left: 4rem;
         margin-right: 0;
         opacity: 0;
-        animation: fade-in 2s forwards ease-in;
-        
+        animation: fade-in 2s forwards ease-in;        
     }
 }
 
