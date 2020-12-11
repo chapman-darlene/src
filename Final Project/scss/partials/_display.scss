@@ -126,7 +126,7 @@ header h1::after {
         position: absolute;
         margin-top: .5rem;
         margin-left: 4rem;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
         padding-left: 3rem;
     }
     @include MQ(L){
@@ -263,7 +263,7 @@ footer a:nth-child(1)::before {
     content: url('../assets/icons/h5.png');
 }
 
-footer a:nth-child(1) {
+footer a:nth-child(1){
     text-align: center;
 }
 
